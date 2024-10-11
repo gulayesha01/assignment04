@@ -75,4 +75,19 @@ ggplot(forest_line,
 
 
 ```
+*Third Visualization : Foreign Direct Investment(Net Inflows as % of GDP)* *This visualization shows the foreign direct investment in Pakistan as net inflows of % GDP. The highest spike can be seen in years 2006, 2007, 2008 because a lot of foreign aid poured into Pakistan afer 2001 (as it provided land and air routes to US and NATO for war against terrorism). The foreign aid helped stabilized the economy and attracted the foreign direct investment.*
 
+```{r}
+FDI_bar <- read_excel("data/FDI_bar.xlsx")
+
+ggplot(FDI_bar, 
+        mapping = aes (x = year, y = fdi, fill = fdi)) +
+  geom_col() +
+  labs(title = "Pakistan- Foreign direct investment(FDI), net inflows (% of GDP)",
+       subtitle = "1970 - 2023",
+       caption = "Source: World Bank Data",
+       x= expression(bold("Years")),
+       y = expression(atop(bold("FDI"), "% of GDP")))
+
+
+```
