@@ -57,5 +57,22 @@ plot.title = element_text(face ="bold"),
  axis.text.y = element_text(face = "bold"),
 )
 ```
+*Second Visuaization: Forest Area (% of land are):* *The visualization shows that forest area in Pakistan, as percentage of land area, is constantly decreasing. Pakistan is amongst the top 10 countries hit by climate change and has experienced castastrophic flooding in recent past. One of the reasons for this could be the constantly declining forest area in the country.*
 
+```{r}
+
+forest_line <- read_excel("data/forest_line.xlsx")
+
+ggplot(forest_line, 
+       mapping = aes (x = year, y = forest_area )) +
+  geom_line(linewidth = 1) +
+  labs(title = "Pakistan- Forest area (% of land area)",
+       subtitle = "1990 - 2021",
+       caption = "Source: World Bank Data",
+       x= expression(bold("Years")),
+       y = expression(atop(bold("Forest Area"), "% of land area"))) +
+   theme_minimal()
+
+
+```
 
