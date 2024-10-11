@@ -1,0 +1,27 @@
+---
+title: "Assignment 4"
+author: "Ayesha Gul"
+format: html
+editor: visual
+line_numbers: true
+message: false 
+warning: false
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(dplyr)
+
+```
+
+------------------------------------------------------------------------
+
+### Data Source
+
+-   [World Bank Data](https://data.worldbank.org/country/pakistan)
+
+
+
+
