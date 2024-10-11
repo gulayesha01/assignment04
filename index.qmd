@@ -91,3 +91,18 @@ ggplot(FDI_bar,
 
 
 ```
+*Fourth Visualization : Map of Pakistan:* *Pakisan is a country in South Asia. It is the fifth most populous country in the world. The country has mostly remained under the dictatorships with few spells unders the democratic governments. It's has mostly remained economically unstable. Currently, it is not only experiencing economic instability but also political and law & order problems.*
+
+```{r}
+library(rgeoboundaries)
+
+Pakistan <- geoboundaries(
+  country = "Pakistan", 
+  adm_lvl = "adm1",
+  type = "SSCGS" # Simplified Single Country Globally Standardized
+) 
+
+ggplot(data = Pakistan) +
+  geom_sf()
+
+```
