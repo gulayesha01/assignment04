@@ -57,6 +57,7 @@ plot.title = element_text(face ="bold"),
  axis.text.y = element_text(face = "bold"),
 )
 ```
+
 *Second Visuaization: Forest Area (% of land are):* *The visualization shows that forest area in Pakistan, as percentage of land area, is constantly decreasing. Pakistan is amongst the top 10 countries hit by climate change and has experienced castastrophic flooding in recent past. One of the reasons for this could be the constantly declining forest area in the country.*
 
 ```{r}
@@ -75,6 +76,7 @@ ggplot(forest_line,
 
 
 ```
+
 *Third Visualization : Foreign Direct Investment(Net Inflows as % of GDP)* *This visualization shows the foreign direct investment in Pakistan as net inflows of % GDP. The highest spike can be seen in years 2006, 2007, 2008 because a lot of foreign aid poured into Pakistan afer 2001 (as it provided land and air routes to US and NATO for war against terrorism). The foreign aid helped stabilized the economy and attracted the foreign direct investment.*
 
 ```{r}
@@ -91,6 +93,7 @@ ggplot(FDI_bar,
 
 
 ```
+
 *Fourth Visualization : Map of Pakistan:* *Pakisan is a country in South Asia. It is the fifth most populous country in the world. The country has mostly remained under the dictatorships with few spells unders the democratic governments. It's has mostly remained economically unstable. Currently, it is not only experiencing economic instability but also political and law & order problems.*
 
 ```{r}
@@ -106,3 +109,5 @@ ggplot(data = Pakistan) +
   geom_sf()
 
 ```
+
+*Four Visualization Completed*
