@@ -22,6 +22,40 @@ library(dplyr)
 
 -   [World Bank Data](https://data.worldbank.org/country/pakistan)
 
+*First Data Visualization is about population of Pakistan. Population increase is a huge challenge that Pakistan is facing.Population bomb is aggravating the challenges as it is coupled with deteriorating economic and security situation,increasing unemployment rates and increased political polarization in the country.*
 
+```{r}
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+
+population_point <- read_excel("data/population_point.xlsx") 
+
+population_point <- population_point |> mutate(total_pop = total_pop/1000000)
+
+ggplot(data = population_point,
+mapping = aes(x= year,y = total_pop))+
+  geom_point(color = "blue", alpha = 0.2, shape = 16) +
+ scale_x_continuous(limits= c(1960, 2023), breaks = seq(1960,2023, by = 10)) +
+ scale_y_continuous(limits = c(0, 250), breaks = seq (0,250, by = 50)) +
+ geom_smooth(method = "lm", color ="pink",
+ se = FALSE) +
+ labs(title = "Annual Total Population of Pakistan",
+subtitle = "1960 - 2023",
+ caption = "Source: World Bank Data",
+ x= expression(bold("Years")),
+ y = expression(atop(bold("Total Population"), "in Millions"))) +
+  
+ annotate("text", x = 1970, y = 150, label = "Constantly increasing after 1970", hjust = -0.01, vjust = -0.1, )+
+  
+theme(axis.title.x = element_text(hjust= 0),
+axis.title.y = element_text(angle = 0,
+ vjust = 1.07),
+plot.title = element_text(face ="bold"),
+ axis.text.x = element_text(face ="bold"),
+ axis.text.y = element_text(face = "bold"),
+)
+```
 
 
